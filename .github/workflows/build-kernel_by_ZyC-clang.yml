@@ -111,8 +111,7 @@ jobs:
       run: |
         cd $GITHUB_WORKSPACE/kernel_workspace
         git clone ${{ env.KERNEL_SOURCE }} -b ${{ env.KERNEL_SOURCE_BRANCH }} android-kernel --depth=1
-        cd $GITHUB_WORKSPACE/kernel_workspace/android-kernel/drivers
-        git clone https://github.com/tiann/KernelSU.git
+      
 
     - name: Download source boot image
       if: env.BUILD_BOOT_IMG == 'true'
